@@ -280,6 +280,10 @@ select#select-instrument option {
   background-image: url(../images/cowbell.png)
 }
 
+.instruments>#metalpipe, #layer-metalpipe {
+  background-image: url(../images/metalpipe.png)
+}
+
 .instruments>#keyboard, .instruments>#cymbal, .instruments>#marimba, .instruments>#tambourine, .instruments>#cowbell {
   visibility: hidden
 }

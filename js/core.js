@@ -8,7 +8,8 @@ const InstrumentEnum = Object.freeze({
   CYMBAL: 4,
   MARIMBA: 5,
   TAMBOURINE: 6,
-  COWBELL: 7
+  COWBELL: 7,
+  METALPIPE: 8
 })
 const KeyEnum = Object.freeze({
   "A": 1,
@@ -37,7 +38,8 @@ const KeyEnum = Object.freeze({
   "O": 9,
   "P": 0,
   "B": 1,
-  "F": 1
+  "F": 1,
+  "M": 1
 })
 const InstrumentPerKeyEnum = Object.freeze({
   "A": InstrumentEnum.BONGO,
@@ -66,7 +68,8 @@ const InstrumentPerKeyEnum = Object.freeze({
   "O": InstrumentEnum.MARIMBA,
   "P": InstrumentEnum.MARIMBA,
   "B": InstrumentEnum.TAMBOURINE,
-  "F": InstrumentEnum.COWBELL
+  "F": InstrumentEnum.COWBELL,
+  "M": InstrumentEnum.METALPIPE
 })
 const ClickKeyEquivalentEnum = Object.freeze({
   "1": "A",
@@ -81,7 +84,8 @@ const TapKeyEquivalentEnum = Object.freeze({
     "BONGO": ["D"],
     "CYMBAL": ["C"],
     "TAMBOURINE": ["B"],
-    "COWBELL": ["F"]
+    "COWBELL": ["F"],
+    "METALPIPE": ["M"]
   },
   "tap-space": {
     "MEOW": [" "]
@@ -134,7 +138,8 @@ const TapKeysPerLayerEnum = Object.freeze({
   "layer-cymbal": ["tap-right"],
   "layer-marimba": ["tap-keys"],
   "layer-tambourine": ["tap-right"],
-  "layer-cowbell": ["tap-right"]
+  "layer-cowbell": ["tap-right"],
+  "layer-metalpipe": ["tap-right"]
 })
 const LayersPerInstrumentEnum = Object.freeze({
   "layer-bongo": InstrumentEnum.BONGO,
@@ -164,6 +169,7 @@ $(document).ready(function() {
   $.loadSimple("cymbal");
   $.loadSimple("tambourine");
   $.loadSimple("cowbell");
+  $.loadSimple("metalpipe");
   $.layers("layer-bongo");
   $("select#select-instrument").on("change", function() {
     $.layers($(this).val());
@@ -298,6 +304,9 @@ var i18n_map = {
   "Tambourine": {
     "en": "Tambourine",
     "ca": "Pandereta"},
+  "Metalpipe": {
+    "en": "Metal pipe",
+    "ca": "Tub metàl·lic"},
   "Meow": {
     "en": "Meow",
     "ca": "Miol"},
