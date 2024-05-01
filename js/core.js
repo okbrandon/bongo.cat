@@ -148,7 +148,8 @@ const LayersPerInstrumentEnum = Object.freeze({
   "layer-cymbal": InstrumentEnum.CYMBAL,
   "layer-marimba": InstrumentEnum.MARIMBA,
   "layer-tambourine": InstrumentEnum.TAMBOURINE,
-  "layer-cowbell": InstrumentEnum.COWBELL
+  "layer-cowbell": InstrumentEnum.COWBELL,
+  "layer-metalpipe": InstrumentEnum.METALPIPE
 })
 var pressed = [];
 var currentLayer;
